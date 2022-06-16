@@ -1,7 +1,7 @@
 {
   "name": "quran-app",
   "version": "0.1.0",
-  "homepage": "https://hosam8081.github.io/quran",
+  "homepage": "https://hosam8081.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.18",
