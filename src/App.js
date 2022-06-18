@@ -37,7 +37,7 @@ function App() {
         start && (
           <audio controls autoPlay key={start}  ref={audioChange}>
             <source src={start} type="audio/ogg" />
-            <source src="horse.mp3" type="audio/mpeg" />
+            <source src={start} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         )
