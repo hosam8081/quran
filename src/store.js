@@ -10,4 +10,5 @@ export const store = configureStore({
     audio:audioReducer,
     ahadeth:ahadethReducer
   },
+  devTools: false,
 })
