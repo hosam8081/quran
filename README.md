@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# quran app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+in this app quran, many reciters, ahadeth and search in quran Using react, redux toolkit, bootsrap 5, sass 
 
 ## features
 - search in reciter
