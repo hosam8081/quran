@@ -21,7 +21,7 @@ function App() {
   }, [start]);
   return (
     <Router>
-      <main className="App">
+      
         <Navbar />
         <Routes>
           <Route exact path="/quran" element={<Home />}></Route>
@@ -39,7 +39,7 @@ function App() {
             Your browser does not support the audio element.
           </audio>
         )}
-      </main>
+      
     </Router>
   );
 }
