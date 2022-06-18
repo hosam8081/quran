@@ -35,7 +35,7 @@ let LastaudioNameStorage = () => {
   if (localStorage.getItem("audioName")) {
     return (audioName = JSON.parse(localStorage.getItem("audioName")));
   } else {
-    return (audioName = []);
+    return (audioName = ["لا يوجد"]);
   }
 };
 
