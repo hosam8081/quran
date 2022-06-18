@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-light fixed-top active main-nav">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/quran">
         قرآن    
         </Link>
         <button
@@ -22,27 +22,27 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/quran">
               قرآن 
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Reciters">
+              <Link className="nav-link" to="/quran/Reciters">
                 التلاوات القرآنية
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Ahadeth">
+              <Link className="nav-link" to="/quran/Ahadeth">
                 احاديث
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Search">
+              <Link className="nav-link" to="/quran/Search">
                 بحث فى القران
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Tasbeh">
+              <Link className="nav-link" to="/quran/Tasbeh">
                 تسابيح
               </Link>
             </li>

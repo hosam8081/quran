@@ -13,7 +13,7 @@ const SingleSurah = ({id, name, ayahs}) => {
           <button className="heading border-0" onClick={() => dispatch(addToFav({id, name, ayahs}))}>{<FaHeart />}</button>
           <span className="ahadeth-number">{id}</span>
         </div>
-        <Link to={`surah/${id}`} onClick={() => dispatch(setSurahName({name, id}))}>
+        <Link to={`/quran/surah/${id}`} onClick={() => dispatch(setSurahName({name, id}))}>
           <h6 className="heading">{name}</h6>
           <h6 className="ahadeth-p">عدد الايات : {ayahs}</h6>
         </Link>
