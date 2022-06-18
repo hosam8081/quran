@@ -8,20 +8,20 @@ import { useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import Ahadeth from "./pages/Ahadeth";
 import Search from "./pages/Search";
-import AhadethPage from './pages/AhadethPage'
+import AhadethPage from "./pages/AhadethPage";
 function App() {
-  const {start} = useSelector(state => state.audio);
+  const { start } = useSelector((state) => state.audio);
   const audioChange = useRef();
-  useEffect (() => {
-    if(audioChange.current){
+  useEffect(() => {
+    if (audioChange.current) {
       audioChange.current.pause();
       audioChange.current.load();
       audioChange.current.play();
-  }
-  }, [start])
+    }
+  }, [start]);
   return (
-    <main className="App">
-      <Router>
+    <Router>
+      <main className="App">
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
@@ -32,17 +32,15 @@ function App() {
           <Route path="/surah/:id" element={<SurahPage />}></Route>
           <Route path="/Ahadeth/:id" element={<AhadethPage />}></Route>
         </Routes>
-      </Router>
-      {
-        start && (
-          <audio controls autoPlay key={start}  ref={audioChange}>
+        {start && (
+          <audio controls autoPlay key={start} ref={audioChange}>
             <source src={start} type="audio/ogg" />
             <source src={start} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-        )
-      }
-    </main>
+        )}
+      </main>
+    </Router>
   );
 }
 
