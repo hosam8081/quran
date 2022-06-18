@@ -2,14 +2,14 @@
 
 in this app quran, many reciters, ahadeth and search in quran Using react, redux toolkit, bootsrap 5, sass 
 
-## features
+## Features
 - search in reciter
 - search in quran 
 - using redux toolkit and createThunk
 - using bootstrap and sass 
 
 ## Demo
-try demo [quran app](https://hosam8081.github.io/quran/)
+:point_right: try demo [quran app](https://hosam8081.github.io/quran/)
 
 
 ## Available Scripts
