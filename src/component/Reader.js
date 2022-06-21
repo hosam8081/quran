@@ -77,7 +77,7 @@ const Reader = () => {
                     <h6 className="heading">{<FaHeart />}</h6>
                     <span className="ahadeth-number">{index + 1}</span>
                   </div>
-                  <Link to={`/quran/reciters/reader/${id}`}>
+                  <Link to={`/reciters/reader/${id}`}>
                     <h6 className="heading">{name}</h6>
                     <h6 className="ahadeth-p">{rewaya}</h6>
                   </Link>

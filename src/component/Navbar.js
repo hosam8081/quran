@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [show, setShow] = useState(false)
   return (
     <nav className="navbar navbar-expand-sm navbar-light fixed-top active main-nav">
       <div className="container-fluid">
@@ -15,34 +16,35 @@ const Navbar = () => {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setShow(!show)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`collapse navbar-collapse ${show&& "show"}`} id="navbarSupportedContent">
           <ul className="navbar-nav me-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/quran">
+              <Link className="nav-link" to="/" onClick={() => setShow(false)}>
               قرآن 
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quran/Reciters">
+              <Link className="nav-link" to="/Reciters" onClick={() => setShow(false)}>
                 التلاوات القرآنية
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quran/Ahadeth">
+              <Link className="nav-link" to="/Ahadeth" onClick={() => setShow(false)}>
                 احاديث
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quran/Search">
+              <Link className="nav-link" to="/Search" onClick={() => setShow(false)}>
                 بحث فى القران
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/quran/Tasbeh">
+              <Link className="nav-link" to="/Tasbeh" onClick={() => setShow(false)}>
                 تسابيح
               </Link>
             </li>

@@ -23,16 +23,16 @@ function App() {
     <Router basename="/quran">
       <Navbar />
       <Routes>
-        <Route exact path="/quran" element={<Home />}></Route>
-        <Route path="/quran/reciters" element={<Reciters />}></Route>
-        <Route path="/quran/Ahadeth" element={<Ahadeth />}></Route>
-        <Route path="/quran/Search" element={<Search />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route path="/reciters" element={<Reciters />}></Route>
+        <Route path="/Ahadeth" element={<Ahadeth />}></Route>
+        <Route path="/Search" element={<Search />}></Route>
         <Route
-          path="/quran/reciters/reader/:id"
+          path="/reciters/reader/:id"
           element={<ReaderPage />}
         ></Route>
-        <Route path="/quran/surah/:id" element={<SurahPage />}></Route>
-        <Route path="/quran/Ahadeth/:id" element={<AhadethPage />}></Route>
+        <Route path="/surah/:id" element={<SurahPage />}></Route>
+        <Route path="/Ahadeth/:id" element={<AhadethPage />}></Route>
       </Routes>
       {start && (
         <audio controls autoPlay key={start} ref={audioChange}>

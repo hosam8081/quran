@@ -73,6 +73,9 @@ ul {
   height:70px;
   background:#fff;
 }
+.navbar > .container-fluid {
+  background: #fff;
+}
 /* surah section */
 .surah-section {
   background:#ecf1f4;
@@ -230,6 +233,11 @@ input.form-control:focus, .custom-select:focus{
 .btn-view {
   background:none;
   font-size:25px
+}
+@media (max-width: 575px) {
+    .btn-view {
+      display: none;
+    }
 }
 audio{
   width: 100%;

@@ -26,7 +26,7 @@ const Aside = () => {
             <div className="d-flex justify-content-between">
               <div className="">
                 <h3>اخر قراءة</h3>
-                <Link className="btn" to={id && `/quran/surah/${id}`}>{surahName}</Link>
+                <Link className="btn" to={id && `/surah/${id}`}>{surahName}</Link>
               </div>
               <div className="">
                 <FaBookOpen className="icon" />

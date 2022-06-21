@@ -40,7 +40,7 @@ const SingleAhadeth = () => {
             return (
               <Link
                 key={id}
-                to={`/quran/Ahadeth/${id}`}
+                to={`/Ahadeth/${id}`}
                 style={{ textDecoration: "none" }}
                 className={active ? "col-12" : "col-sm-6 col-md-4"}
               >
