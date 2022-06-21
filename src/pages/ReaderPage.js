@@ -12,6 +12,7 @@ const ReaderPage = () => {
   const [active, setActive] = useState(false);
   const { id } = useParams();
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getFetchAudio(id));
   }, []);
