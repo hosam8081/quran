@@ -6,9 +6,11 @@ import { useSelector } from "react-redux";
 const Favourate = () => {
   const { favSurah } = useSelector((state) => state.surah);
   let fetchData = () => {
-    return JSON.parse(localStorage.getItem("favSurah")).map((surah) => (
-      <SingleSurah key={surah.id} {...surah} />
-    ));
+    if (JSON.parse(localStorage.getItem("favSurah"))) {
+      return JSON.parse(localStorage.getItem("favSurah")).map((surah) => (
+        <SingleSurah key={surah.id} {...surah} />
+      ));
+    }
   };
   useEffect(() => {
     fetchData();
