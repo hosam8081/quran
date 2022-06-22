@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, current } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getFetchAudio = createAsyncThunk(
@@ -68,6 +68,9 @@ export const audioSlice = createSlice({
       );
       if (!audioFind) {
         state.audioFav.push(action.payload);
+        localStorage.setItem("audioFav", JSON.stringify(state.audioFav));
+      } else {
+        state.audioFav = state.audioFav.filter(item => item.url !== action.payload.url)
         localStorage.setItem("audioFav", JSON.stringify(state.audioFav));
       }
     },

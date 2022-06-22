@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { onActive, ofActive } from "../reducer/surahSlice";
 import Heading from "./Heading";
@@ -122,7 +122,7 @@ let editdata = [
 ];
 
 const Surah = () => {
-  const {isActive} = useSelector(state => state.surah)
+  const { isActive } = useSelector((state) => state.surah);
   const dispatch = useDispatch();
   return (
     <div className="col-lg-9 surah-section mt-5">

@@ -9,6 +9,7 @@ import {
   handleCheckOption,
 } from "../reducer/readerSlice";
 import Loading from "./Loading";
+import SingleReciter from "./SingleReciter"
 const Reader = () => {
   const [active, setActive] = useState(false);
   const { readers, loading, newData, info, option } = useSelector(
@@ -68,21 +69,8 @@ const Reader = () => {
           newData.map((reader, index) => {
             const { id, name, server, rewaya } = reader;
             return (
-              <div
-                key={id}
-                className={`${active ? "col-12" : "col-sm-6 col-md-4"}`}
-              >
-                <div className="card scale">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="heading">{<FaHeart />}</h6>
-                    <span className="ahadeth-number">{index + 1}</span>
-                  </div>
-                  <Link to={`/reciters/reader/${id}`}>
-                    <h6 className="heading">{name}</h6>
-                    <h6 className="ahadeth-p">{rewaya}</h6>
-                  </Link>
-                </div>
-              </div>
+              <SingleReciter key={id} {...reader} active={active} index={index}/>
+              
             );
           })
         )}

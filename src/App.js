@@ -9,6 +9,7 @@ import { useEffect, useRef } from "react";
 import Ahadeth from "./pages/Ahadeth";
 import Search from "./pages/Search";
 import AhadethPage from "./pages/AhadethPage";
+import Favourate from "./pages/Favourate";
 function App() {
   const { start } = useSelector((state) => state.audio);
   const audioChange = useRef();
@@ -27,6 +28,7 @@ function App() {
         <Route path="/reciters" element={<Reciters />}></Route>
         <Route path="/Ahadeth" element={<Ahadeth />}></Route>
         <Route path="/Search" element={<Search />}></Route>
+        <Route path="/Favourate" element={<Favourate />}></Route>
         <Route
           path="/reciters/reader/:id"
           element={<ReaderPage />}

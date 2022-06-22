@@ -29,9 +29,9 @@ let  getLocalID = () => {
 let  getLocalFav = () => {
   let favSurah;
   if (localStorage.getItem("favSurah")) {
-    return favSurah = localStorage.getItem("favSurah")
+    return favSurah = JSON.parse(localStorage.getItem("favSurah"))
   }else {
-    return favSurah = ''
+    return favSurah = []
   }
 }
 
@@ -54,10 +54,17 @@ export const surahSlice = createSlice({
       localStorage.setItem("surah", state.surahName)
       localStorage.setItem("surahid", state.id)
     },
-    addToFav: (state, action) => {
-      console.log(action.payload)
-      state.favSurah = [...state.favSurah, action.payload]
-      localStorage.setItem("favSurah", JSON.stringify(state.favSurah))
+    addToFav: (state, action) => {      
+      let surahFind = state.favSurah.find(
+        (item) => item.id == action.payload.id
+      );
+      if (!surahFind) {
+        state.favSurah.push(action.payload);
+        localStorage.setItem("favSurah", JSON.stringify(state.favSurah));
+      } else {
+        state.favSurah = state.favSurah.filter(item => item.id !== action.payload.id)
+        localStorage.setItem("favSurah", JSON.stringify(state.favSurah));
+      }
     },
     onActive: (state) => {
       state.isActive = true 
